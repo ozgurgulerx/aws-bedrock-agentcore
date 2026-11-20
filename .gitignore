@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.aws/
+.study/
+
+# Local workspace and browser sessions
+.playwright-mcp/
+CLAUDE.md
+.DS_Store
+.env.*
+*.pem
+*.key
+
+# Publish authored tools, source links and study maps. Keep account notes
+# and all downloaded or generated library data on the local machine.
+documentation/*
+!documentation/tools/
+!documentation/sources.json
+!documentation/mindmaps/

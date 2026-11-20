@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<opml version="2.0">
+  <head>
+    <title>Amazon SageMaker — capabilities and inference</title>
+  </head>
+  <body>
+    <outline text="Amazon SageMaker">
+      <outline text="SageMaker AI — build, train and deploy models">
+        <outline text="Build or select a model">
+          <outline text="JumpStart — discover and use pretrained models" />
+          <outline text="Bring your own model and compatible inference container" />
+        </outline>
+        <outline text="Prepare model data">
+          <outline text="Process and transform training inputs" />
+          <outline text="Keep training, validation and test data separate" />
+        </outline>
+        <outline text="Train and customize">
+          <outline text="Managed training jobs" />
+          <outline text="Fine-tune supported models" />
+          <outline text="Evaluate quality before deployment" />
+        </outline>
+        <outline text="Deploy and run inference">
+          <outline text="Choose by workload requirements">
+            <outline text="Immediate response or queued result?" />
+            <outline text="Payload size per request — not total dataset size" />
+            <outline text="Processing duration and end-to-end deadline" />
+            <outline text="GPU required?" />
+            <outline text="Sustained traffic, intermittent requests or offline bulk work?" />
+          </outline>
+          <outline text="Real-time endpoint">
+            <outline text="Choose — interactive requests and sustained traffic" />
+            <outline text="Compute — GPU instances supported" />
+            <outline text="Limits — overview lists 25 MB; regular response 60 seconds" />
+            <outline text="Streaming — overview lists up to 8 minutes" />
+            <outline text="Flow — invoke endpoint → model processes → response" />
+            <outline text="Example — interactive predictions with a small input" />
+            <outline text="Trap — real-time does not guarantee sub-millisecond model execution" />
+            <outline text="Check API-specific limits — AWS feature matrix still lists 6 MB" />
+            <outline text="AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html" />
+          </outline>
+          <outline text="Serverless endpoint">
+            <outline text="Choose — intermittent traffic and small, short requests" />
+            <outline text="Compute — no GPU support; configure memory rather than an instance type" />
+            <outline text="Limits — up to 4 MB and 60 seconds" />
+            <outline text="Flow — invoke endpoint → managed compute → response" />
+            <outline text="Cost and latency — on-demand scale to zero; cold starts possible" />
+            <outline text="Provisioned concurrency — keep capacity warm at added cost" />
+            <outline text="Example — occasional CPU-compatible classification" />
+            <outline text="Trap — on-demand requirements do not automatically mean serverless" />
+            <outline text="AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html" />
+          </outline>
+          <outline text="Asynchronous endpoint">
+            <outline text="Choose — queued requests, large payloads or long processing" />
+            <outline text="Compute — GPU instances supported; can configure scale to zero" />
+            <outline text="Limits — up to 1 GB input and one hour processing" />
+            <outline text="Flow — S3 input → InvokeEndpointAsync → queue → inference → S3 output" />
+            <outline text="Notifications — optional SNS success or failure notification" />
+            <outline text="Example — image generation from a 50 MB input on a GPU" />
+            <outline text="Design example — queued GPU inference">
+              <outline text="GPU requirement eliminates serverless" />
+              <outline text="A 50 MB request exceeds standard real-time payload limits" />
+              <outline text="Queued individual requests fit asynchronous inference" />
+              <outline text="Lambda submits the request; it need not wait for generation" />
+            </outline>
+            <outline text="Trap — 15 minutes is the scenario deadline, not the current service maximum" />
+            <outline text="Deadline includes queue wait, startup and processing; benchmark and size capacity" />
+            <outline text="AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html" />
+          </outline>
+          <outline text="Batch transform">
+            <outline text="Choose — offline predictions over a prepared dataset" />
+            <outline text="Compute — GPU instances supported; no persistent endpoint" />
+            <outline text="Limits — large datasets; distinguish job size from per-request payload" />
+            <outline text="Flow — S3 dataset → transform job → S3 results" />
+            <outline text="Example — generate predictions for a nightly dataset" />
+            <outline text="Trap — batch is not inherently unable to finish within 15 minutes" />
+            <outline text="Poor fit for the question — starting offline jobs for individual interactive requests" />
+            <outline text="AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/batch-transform.html" />
+          </outline>
+        </outline>
+        <outline text="Operate and govern models">
+          <outline text="Monitor quality, latency, errors and resource use" />
+          <outline text="Autoscale supported deployments and optimize cost" />
+          <outline text="Version, approve and release models" />
+          <outline text="Secure data and invocation access" />
+          <outline text="Check feature compatibility for the chosen inference mode" />
+        </outline>
+      </outline>
+      <outline text="Unified Studio — shared development environment">
+        <outline text="Access data, analytics and AI tools together" />
+      </outline>
+      <outline text="Lakehouse — unified data access">
+        <outline text="Connect S3 data lakes, Redshift and other sources" />
+      </outline>
+      <outline text="Data processing — prepare and integrate data">
+        <outline text="AWS Glue, Amazon EMR and Amazon Athena" />
+      </outline>
+      <outline text="SQL analytics — query and analyze">
+        <outline text="Amazon Redshift" />
+      </outline>
+      <outline text="Data and AI governance">
+        <outline text="Discover and catalog data assets" />
+        <outline text="Govern access and collaboration" />
+        <outline text="SageMaker Catalog, built on Amazon DataZone" />
+      </outline>
+      <outline text="Bedrock integration — managed generative AI applications">
+        <outline text="Access managed foundation models and application capabilities" />
+        <outline text="Bedrock remains a distinct AWS service" />
+      </outline>
+      <outline text="Sources and study scope">
+        <outline text="Verified 2026-11-11; recheck volatile limits before implementation" />
+        <outline text="Platform map is an orientation aid, not a complete exam blueprint" />
+        <outline text="Platform: https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html" />
+        <outline text="Inference options: https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model-options.html" />
+        <outline text="Feature compatibility: https://docs.aws.amazon.com/sagemaker/latest/dg/model-deploy-feature-matrix.html" />
+      </outline>
+    </outline>
+  </body>
+</opml>

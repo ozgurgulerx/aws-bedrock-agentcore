@@ -1,0 +1,91 @@
+# Amazon SageMaker
+
+- SageMaker AI — build, train and deploy models
+  - Build or select a model
+    - JumpStart — discover and use pretrained models
+    - Bring your own model and compatible inference container
+  - Prepare model data
+    - Process and transform training inputs
+    - Keep training, validation and test data separate
+  - Train and customize
+    - Managed training jobs
+    - Fine-tune supported models
+    - Evaluate quality before deployment
+  - Deploy and run inference
+    - Choose by workload requirements
+      - Immediate response or queued result?
+      - Payload size per request — not total dataset size
+      - Processing duration and end-to-end deadline
+      - GPU required?
+      - Sustained traffic, intermittent requests or offline bulk work?
+    - Real-time endpoint
+      - Choose — interactive requests and sustained traffic
+      - Compute — GPU instances supported
+      - Limits — overview lists 25 MB; regular response 60 seconds
+      - Streaming — overview lists up to 8 minutes
+      - Flow — invoke endpoint → model processes → response
+      - Example — interactive predictions with a small input
+      - Trap — real-time does not guarantee sub-millisecond model execution
+      - Check API-specific limits — AWS feature matrix still lists 6 MB
+      - AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html
+    - Serverless endpoint
+      - Choose — intermittent traffic and small, short requests
+      - Compute — no GPU support; configure memory rather than an instance type
+      - Limits — up to 4 MB and 60 seconds
+      - Flow — invoke endpoint → managed compute → response
+      - Cost and latency — on-demand scale to zero; cold starts possible
+      - Provisioned concurrency — keep capacity warm at added cost
+      - Example — occasional CPU-compatible classification
+      - Trap — on-demand requirements do not automatically mean serverless
+      - AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html
+    - Asynchronous endpoint
+      - Choose — queued requests, large payloads or long processing
+      - Compute — GPU instances supported; can configure scale to zero
+      - Limits — up to 1 GB input and one hour processing
+      - Flow — S3 input → InvokeEndpointAsync → queue → inference → S3 output
+      - Notifications — optional SNS success or failure notification
+      - Example — image generation from a 50 MB input on a GPU
+      - Design example — queued GPU inference
+        - GPU requirement eliminates serverless
+        - A 50 MB request exceeds standard real-time payload limits
+        - Queued individual requests fit asynchronous inference
+        - Lambda submits the request; it need not wait for generation
+      - Trap — 15 minutes is the scenario deadline, not the current service maximum
+      - Deadline includes queue wait, startup and processing; benchmark and size capacity
+      - AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html
+    - Batch transform
+      - Choose — offline predictions over a prepared dataset
+      - Compute — GPU instances supported; no persistent endpoint
+      - Limits — large datasets; distinguish job size from per-request payload
+      - Flow — S3 dataset → transform job → S3 results
+      - Example — generate predictions for a nightly dataset
+      - Trap — batch is not inherently unable to finish within 15 minutes
+      - Poor fit for the question — starting offline jobs for individual interactive requests
+      - AWS guide: https://docs.aws.amazon.com/sagemaker/latest/dg/batch-transform.html
+  - Operate and govern models
+    - Monitor quality, latency, errors and resource use
+    - Autoscale supported deployments and optimize cost
+    - Version, approve and release models
+    - Secure data and invocation access
+    - Check feature compatibility for the chosen inference mode
+- Unified Studio — shared development environment
+  - Access data, analytics and AI tools together
+- Lakehouse — unified data access
+  - Connect S3 data lakes, Redshift and other sources
+- Data processing — prepare and integrate data
+  - AWS Glue, Amazon EMR and Amazon Athena
+- SQL analytics — query and analyze
+  - Amazon Redshift
+- Data and AI governance
+  - Discover and catalog data assets
+  - Govern access and collaboration
+  - SageMaker Catalog, built on Amazon DataZone
+- Bedrock integration — managed generative AI applications
+  - Access managed foundation models and application capabilities
+  - Bedrock remains a distinct AWS service
+- Sources and study scope
+  - Verified 2026-11-11; recheck volatile limits before implementation
+  - Platform map is an orientation aid, not a complete exam blueprint
+  - Platform: https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html
+  - Inference options: https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model-options.html
+  - Feature compatibility: https://docs.aws.amazon.com/sagemaker/latest/dg/model-deploy-feature-matrix.html

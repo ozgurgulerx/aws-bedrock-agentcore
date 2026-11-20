@@ -1,0 +1,184 @@
+[
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html",
+    "product": "agentcore",
+    "topics": [
+      "runtime"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory.html",
+    "product": "agentcore",
+    "topics": [
+      "memory"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html",
+    "product": "agentcore",
+    "topics": [
+      "gateway"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/identity.html",
+    "product": "agentcore",
+    "topics": [
+      "identity"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/code-interpreter-tool.html",
+    "product": "agentcore",
+    "topics": [
+      "code-interpreter"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/browser-tool.html",
+    "product": "agentcore",
+    "topics": [
+      "browser"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html",
+    "product": "agentcore",
+    "topics": [
+      "observability"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html",
+    "product": "agentcore",
+    "topics": [
+      "evaluations"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html",
+    "product": "agentcore",
+    "topics": [
+      "policy"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry.html",
+    "product": "agentcore",
+    "topics": [
+      "registry"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.html",
+    "product": "agentcore",
+    "topics": [
+      "harness"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments.html",
+    "product": "agentcore",
+    "topics": [
+      "payments"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/optimization.html",
+    "product": "agentcore",
+    "topics": [
+      "optimization"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-get-started-cli.html",
+    "product": "agentcore",
+    "topics": [
+      "runtime"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/develop-agents.html",
+    "product": "agentcore",
+    "topics": [
+      "develop-agents"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-service-contract.html",
+    "product": "agentcore",
+    "topics": [
+      "runtime"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-permissions.html",
+    "product": "agentcore",
+    "topics": [
+      "runtime"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-getting-started.html",
+    "product": "agentcore",
+    "topics": [
+      "runtime"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+    "product": "agentcore",
+    "topics": [
+      "release-notes"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html",
+    "product": "agentcore",
+    "topics": [
+      "what-is-bedrock-agentcore"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-get-started.html",
+    "product": "agentcore",
+    "topics": [
+      "memory"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-quick-start.html",
+    "product": "agentcore",
+    "topics": [
+      "gateway"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/identity-getting-started.html",
+    "product": "agentcore",
+    "topics": [
+      "identity"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/on-demand-evaluations.html",
+    "product": "agentcore",
+    "topics": [
+      "evaluations"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy-getting-started.html",
+    "product": "agentcore",
+    "topics": [
+      "policy"
+    ]
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-get-started.html",
+    "product": "agentcore",
+    "topics": [
+      "registry"
+    ]
+  }
+]

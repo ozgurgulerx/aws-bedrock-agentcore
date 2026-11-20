@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mindmap"
+  short_description: "Edit learning maps with examples and source links"
+  default_prompt: "Use $mindmap to update my learning map with concise topics, examples in notes, and clickable official documentation."
